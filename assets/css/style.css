@@ -60,7 +60,7 @@ header a {
 /* Navbar styles with dropdown */
 nav {
     background-color: rgb(39, 63, 77);
-    padding: 0 ;
+    padding: 0 1rem;
     box-shadow: 0 2px 2px antiquewhite;
     display: none;
     position: absolute;
@@ -86,6 +86,7 @@ nav {
     transform: translateY(-50%);
     cursor: pointer;
 }
+
 
 /* main content */
 main {
@@ -114,5 +115,25 @@ footer {
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
+    }
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
+    #logo {
+        font-size: 280%;
+        line-height: 78px;
+        margin: 0 0.5rem;
+    }
+    /*Main Content*/
+    main {
+        /* Push main content down to accomodate large header*/
+        margin-top: 79px;
     }
 }
