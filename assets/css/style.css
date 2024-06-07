@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Lato;
 }
 
 /*Generic Styles*/
@@ -12,6 +13,7 @@ body {
     flex-direction: column;
     /* Generic project styles */
     color: #3a3a3a;
+    font-family: 'Lato', sans-serif;
 }
 
 /* header */
