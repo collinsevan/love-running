@@ -17,7 +17,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* header */
+/* header content */
 header {
     background: rgb(39, 63, 77);
     padding: 0 1rem;
@@ -38,20 +38,9 @@ h1 {
 header a {
     text-decoration: none;
     color: inherit;
-}
-
-/* main */
-main {
-    background-color: rgb(45, 72, 89);
-    /* Make main element take up any surplus space*/
-        flex-grow: 1;
-        color: hsl(34, 78%, 91%);
-}
-
-/* footer */
-footer {
-    background: rgb(39, 63, 77);
-    color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 #menu {
@@ -64,6 +53,46 @@ footer {
     margin-bottom: 1em;
 }
 
+
 .active {
     border-bottom: 1px solid antiquewhite;
+}
+/* Navbar styles with dropdown */
+nav {
+    position: absolute;
+    background-color: rgb(39, 63, 77);
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px antiquewhite;
+    display: none;
+    top: 100%;
+}
+
+/* nav-toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle {
+    font-size: 2rem;
+}
+
+/* main content */
+main {
+    background-color: rgb(45, 72, 89);
+    /* Make main element take up any surplus space*/
+    flex: 2 0 auto;
+    color: hsl(34, 78%, 91%);
+    margin-top: 47px;
+}
+
+/* footer content */
+footer {
+    background: rgb(39, 63, 77);
+    color: antiquewhite;
 }
