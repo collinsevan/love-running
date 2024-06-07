@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Lato;
+    color: antiquewhite;
 }
 
 /*Generic Styles*/
@@ -18,21 +19,29 @@ body {
 
 /* header */
 header {
-    background-color: rgb(255, 0, 247);
+    background: rgb(39, 63, 77);
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px antiquewhite;
 }
 
 h1 {
     font-family: 'Oswald', sans-serif;
+    padding-bottom0: 10px;
 }
 
 /* main */
 main {
-    background-color: chocolate;
+    background-color: rgb(45, 72, 89);
     /* Make main element take up any surplus space*/
         flex-grow: 1;
+        color: hsl(34, 78%, 91%);
 }
 
 /* footer */
 footer {
-    background-color: chartreuse;
+    background: rgb(39, 63, 77);
+    color: antiquewhite;
 }
