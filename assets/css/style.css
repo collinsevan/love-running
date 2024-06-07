@@ -20,12 +20,18 @@ body {
 header {
     background-color: rgb(255, 0, 247);
 }
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
 /* main */
 main {
     background-color: chocolate;
     /* Make main element take up any surplus space*/
         flex-grow: 1;
 }
+
 /* footer */
 footer {
     background-color: chartreuse;
