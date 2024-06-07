@@ -29,7 +29,15 @@ header {
 
 h1 {
     font-family: 'Oswald', sans-serif;
-    padding-bottom0: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: antiquewhite;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* main */
