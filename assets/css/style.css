@@ -1,0 +1,19 @@
+/* Astrisk wildcard selector overiding the default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+header {
+    background-color: rgb(255, 0, 247);
+}
+/* main */
+main {
+    background-color: chocolate;
+}
+/* footer */
+footer {
+    background-color: chartreuse;
+}
