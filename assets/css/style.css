@@ -1,20 +1,19 @@
-/* Astrisk wildcard selector overiding the default styles */
+/* Asterisk wildcard selector overriding the default styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     color: antiquewhite;
 }
 
-/*Generic Styles*/
+/* Generic Styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     /* Generic project styles */
     color: #3a3a3a;
-    font-family: 'Lato', sans-serif;
 }
 
 /* header content */
@@ -25,6 +24,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
@@ -38,39 +40,37 @@ h1 {
 header a {
     text-decoration: none;
     color: inherit;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
 }
 
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
+    display: flex;
 }
 
 #menu > li {
-    margin-bottom: 1em;
+    margin-left: 2rem;
 }
-
 
 .active {
     border-bottom: 1px solid antiquewhite;
 }
+
 /* Navbar styles with dropdown */
 nav {
-    position: absolute;
     background-color: rgb(39, 63, 77);
-    width: 100%;
-    left: 0;
-    padding: 0 1rem;
+    padding: 0 ;
     box-shadow: 0 2px 2px antiquewhite;
     display: none;
+    position: absolute;
     top: 100%;
+    left: 0;
+    width: 100%;
 }
 
 /* nav-toggle */
-#nav-toggle:checked~nav {
+#nav-toggle:checked ~ nav {
     display: block;
 }
 
@@ -78,21 +78,41 @@ nav {
     display: none;
 }
 
-.nav-toggle {
+.nav-toggle-label {
     font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 /* main content */
 main {
     background-color: rgb(45, 72, 89);
-    /* Make main element take up any surplus space*/
-    flex: 2 0 auto;
+    /* Make main element take up any surplus space */
+    flex-grow: 1;
     color: hsl(34, 78%, 91%);
-    margin-top: 47px;
+    padding-top: 100px; /* Ensure the main content is not hidden behind the fixed header */
+    padding: 1rem;
 }
 
 /* footer content */
 footer {
     background: rgb(39, 63, 77);
     color: antiquewhite;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media  screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
 }
