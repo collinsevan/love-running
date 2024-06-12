@@ -95,10 +95,11 @@ nav {
 main {
     background-color: rgb(45, 72, 89);
     /* Make main element take up any surplus space */
-    flex-grow: 1;
+    flex: 1 0 auto;
     color: hsl(34, 78%, 91%);
-    padding-top: 100px; /* Ensure the main content is not hidden behind the fixed header */
+    margin-top: 47px;
     padding: 1rem;
+    background: url("../images/hero-image.webp") center center/cover no-repeat;
 }
 
 /* footer content */
@@ -140,7 +141,6 @@ footer ul#social-list li a {
     #menu {
         display: flex;
     }
-
     #menu > li {
         padding-left: 1rem;
     }
@@ -152,10 +152,14 @@ footer ul#social-list li a {
         line-height: 78px;
         margin: 0 0.5rem;
     }
-    /*Main Content*/
+    /* Main Content */
     main {
-        /* Push main content down to accommodate large header*/
+        /* Push main content down to accommodate large header */
         margin-top: 79px;
+    }
+    /* Footer */
+    footer {
+        padding-top: 3rem;
     }
 }
 
