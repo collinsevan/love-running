@@ -1,40 +1,41 @@
-/* Asterisk wildcard selector overriding the default styles */
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    color: antiquewhite;
 }
 
-/* Generic Styles */
+/* General styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Generic project styles */
     color: #3a3a3a;
-    margin: 0;
+    font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
-    padding-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: antiquewhite;
+    color: #252525;
 }
 
-/* header content */
+/* Header */
 header {
-    background: rgb(39, 63, 77);
+    background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
     z-index: 99;
     width: 100%;
-    box-shadow: 0 2px 2px antiquewhite;
+    box-shadow: 0 2px 2px #3a3a3a;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 
 header a {
@@ -46,35 +47,30 @@ header a {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
-    display: flex;
 }
 
 #menu > li {
-    margin-left: 2rem;
+    margin-bottom: 1em;
 }
 
-#menu a:hover {
-    border-bottom: 1px solid antiquewhite;
+.active {
+    border-bottom: 1px solid #3a3a3a;
 }
 
-#menu .active {
-    border-bottom: 1px solid antiquewhite;
-}
-
-/* Navbar styles with dropdown */
+/* Navbar styles with dropdown toggle */
 nav {
-    background-color: rgb(39, 63, 77);
-    padding: 0 1rem;
-    box-shadow: 0 2px 2px antiquewhite;
-    display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    background-color: #ffffff;
     width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
 }
 
-/* nav-toggle */
-#nav-toggle:checked ~ nav {
+/* Nav toggle */
+#nav-toggle:checked~nav {
     display: block;
 }
 
@@ -84,70 +80,84 @@ nav {
 
 .nav-toggle-label {
     font-size: 2rem;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    cursor: pointer;
 }
 
-/* main content */
+/* Main content */
 main {
-    background-color: rgb(45, 72, 89);
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    color: hsl(34, 78%, 91%);
     margin-top: 47px;
-    padding: .5rem 0 0 0;
-    background: url("../images/hero-image.webp") center center/cover no-repeat;
+}
+
+/* Hero section */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
 }
 
 #cover-text {
-    background-color: rgba(45, 72, 89, 0.7);
-    font-size: 120%;
-    display: inline-block;
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 10px; /* Adjust padding as per your design */
-    box-sizing: border-box;
-    max-width: 300px; /* Adjust this value based on your design */
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
 }
 
 #cover-text > h2, #cover-text > h3 {
-    color: antiquewhite;
-    margin: 0;
+    color: #ffffff;
 }
 
-/* footer content */
-footer {
-    background: rgb(39, 63, 77);
-    color: antiquewhite;
+/* Reasons section */
+#reasons {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#reasons h2 {
+    margin-bottom: 20px;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: auto;
+    font-size: 280%;
 }
 
-footer ul#social-list {
+#benefits-physical > div,
+#benefits-mental > div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+/* Footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
     display: flex;
-    justify-content: center;
-    padding: 0;
-    list-style: none;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
 
-footer ul#social-list li {
-    margin: 0 30px;
-    display: inline-flex;
-    align-items: center;
-}
-
-footer ul#social-list li a {
-    color: antiquewhite;
-    text-decoration: none;
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
 }
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+    /* Header */
     nav {
         display: block;
         position: relative;
@@ -155,43 +165,41 @@ footer ul#social-list li a {
         width: fit-content;
         padding-right: 1rem;
     }
+
     #menu {
         display: flex;
     }
+
     #menu > li {
         padding-left: 1rem;
     }
+
     .nav-toggle-label {
         display: none;
     }
+
     #logo {
         font-size: 280%;
-        line-height: 78px;
+        line-height: 75px;
         margin: 0 0.5rem;
     }
+
+    /* Main content */
     main {
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
-    footer {
-        padding-top: 3rem;
-    }
+
+    /* Hero */
     #cover-text {
-        bottom: 0;
-        left: 0;
-        padding: 10px 15px; /* Adjust padding as per your design */
-        max-width: 400px; /* Adjust this value based on your design */
+        width: 300px;
+        right: 50px;
     }
 }
 
-/* Media query: tablets and larger (992px and up) */
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover {
-        border-bottom: 1px solid antiquewhite;
-    }
-    #cover-text {
-        bottom: 0;
-        left: 0;
-        padding: 15px 20px; /* Adjust padding as per your design */
-        max-width: 500px; /* Adjust this value based on your design */
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
     }
 }
