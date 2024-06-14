@@ -12,8 +12,16 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Generic project styles */
     color: #3a3a3a;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: antiquewhite;
 }
 
 /* header content */
@@ -27,14 +35,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-h1 {
-    font-family: 'Oswald', sans-serif;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: antiquewhite;
 }
 
 header a {
@@ -94,12 +94,29 @@ nav {
 /* main content */
 main {
     background-color: rgb(45, 72, 89);
-    /* Make main element take up any surplus space */
     flex: 1 0 auto;
     color: hsl(34, 78%, 91%);
     margin-top: 47px;
-    padding: 1rem;
+    padding: .5rem 0 0 0;
     background: url("../images/hero-image.webp") center center/cover no-repeat;
+    position: relative;
+}
+
+#cover-text {
+    background-color: rgba(45, 72, 89, 0.7);
+    font-size: 120%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px; /* Adjust padding as per your design */
+    box-sizing: border-box;
+    max-width: 300px; /* Adjust this value based on your design */
+}
+
+#cover-text > h2, #cover-text > h3 {
+    color: antiquewhite;
+    margin: 0;
 }
 
 /* footer content */
@@ -108,6 +125,7 @@ footer {
     color: antiquewhite;
     text-align: center;
     padding: 1rem 0;
+    margin-top: auto;
 }
 
 footer ul#social-list {
@@ -130,7 +148,6 @@ footer ul#social-list li a {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-    /* Header */
     nav {
         display: block;
         position: relative;
@@ -152,14 +169,17 @@ footer ul#social-list li a {
         line-height: 78px;
         margin: 0 0.5rem;
     }
-    /* Main Content */
     main {
-        /* Push main content down to accommodate large header */
         margin-top: 79px;
     }
-    /* Footer */
     footer {
         padding-top: 3rem;
+    }
+    #cover-text {
+        bottom: 0;
+        left: 0;
+        padding: 10px 15px; /* Adjust padding as per your design */
+        max-width: 400px; /* Adjust this value based on your design */
     }
 }
 
@@ -167,5 +187,11 @@ footer ul#social-list li a {
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid antiquewhite;
+    }
+    #cover-text {
+        bottom: 0;
+        left: 0;
+        padding: 15px 20px; /* Adjust padding as per your design */
+        max-width: 500px; /* Adjust this value based on your design */
     }
 }
