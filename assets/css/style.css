@@ -341,17 +341,19 @@ main {
 
     /* Form */
     #signup {
-        background-position: center;
-        position: relative;
+        position: relative; /* Ensure #signup remains relative for absolute positioning */
+        padding-top: 100px; /* Adjust top padding to position it under the header */
+        margin-top: -50px; /* Adjust negative margin to fine-tune position */
+        padding-bottom: 50px; /* Add space from the bottom edge */
     }
 
-    #signup-form {
-        max-width: 400px;
-        position: absolute;
-        left: 10%;
-        top: 150px;
+    /* Adjust signup form */
+    #signup form {
+        max-width: 400px; /* Set max width for the form */
+        margin: 0 auto; /* Center the form horizontally */
+        padding: 30px; /* Add padding to the form */
+        background-color: rgba(60, 60, 60, 0.6); /* Adjust background color */
     }
-
     .text-input:hover {
         border-color: #f16c6b;
     }
